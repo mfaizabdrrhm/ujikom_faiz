@@ -20,3 +20,4 @@ Route::get('/register', function () {
 Route::get('/home', [KasirController::class, 'home']);
 
 Route::post('register', [RegisterController::class,'proses_registrasi']);
+

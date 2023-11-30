@@ -9,19 +9,21 @@
     background-color: darkred;
   }
     .daftar{
-      text-align: center;
-      
+      text-align: center; 
     border: 3px solid gray;
     background-color: pink;
     width: 300px;
     position: absolute;
     transform: translate(-50%,-50%);
     left: 50%;
-    top: 50%
-    
+    top: 50%;
+    border-radius: 10px;
       }
       h2{
         font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      }
+      select{
+        width: 190px;
       }
 
 </style>
