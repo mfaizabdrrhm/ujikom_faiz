@@ -21,3 +21,4 @@ Route::get('/home', [KasirController::class, 'home']);
 
 Route::post('register', [RegisterController::class,'proses_registrasi']);
 
+Route::get('/tambah_pro', [KasirController::class, 'tambah_pro']);
