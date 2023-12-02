@@ -24,22 +24,27 @@
         }
         
     </style>
+    <form action="tambah_pro" method="POST" enctype="multipart/form-data">
+        @method("POST")
+        @csrf
+    
     <p>Tambah Produk</p>
     <div class="qmi">
  
-    <label>Nama Produk</label>
-    <input name="username" type="text"id="username">
+    <label>Nama Produk</label><br>
+    <input name="NamaProduk" type="text"id="NamaProduk">
     <br><br>
-    <label>Harga</label>
-    <input name="username" type="text"id="username">
+    <label>Harga</label><br>
+    <input name="Harga" type="text"id="Harga">
     <br><br>
-    <label>Stok</label>
-    <input name="username" type="text"id="username">
+    <label>Stok</label><br>
+    <input name="Stok" type="text"id="Stok">
     <br><br>
 </div>
 <div class="container">
 <a href="{{url('home')}}"><button type="button" class="btn btn-secondary">Kembali</button</a>
-<button type="button" class="btn btn-info">Tambah</button>
+<button type="submit" class="btn btn-info" style="margin-left:15px;">Tambah</button>
+</form>
 </div>
 </body>
 </html>

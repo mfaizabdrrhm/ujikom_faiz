@@ -3,9 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HOME</title>
+    <title>PENJUALAN</title>
 </head>
-
 <link rel="stylesheet" href="bs/css/bootstrap.min.css">
 <body>
 <style>
@@ -51,34 +50,6 @@
 </nav>
 <br>
 
-<p>Data Produk</p>
-<div class="container">
-<table class="table table-danger">
-<thead>
-    <tr>
-      <th scope="col">Id</th>
-      <th scope="col">Nama Produk</th>
-      <th scope="col">Harga</th>
-      <th scope="col">Stok</th>
-      <th scope="col">Opsi</th>
-    </tr>
-    
-  </thead>
-  <tbody>
-  @foreach ($produk as $produk)
-    <tr>
-      <td>{{$produk->ProdukID}}</td>
-      <td>{{$produk->NamaProduk}}</td>
-      <td>{{$produk->Harga}}</td>
-      <td>{{$produk->Stok}}</td>
-
-      
-      <td><a href="update_produk/{{$produk->ProdukID}}"><button type="button" class="btn btn-outline-success">Update</button></a>
-      <a href="hapus_produk/{{$produk->ProdukID}}"><button type="button" class="btn btn-outline-danger">Delete</button></a></td>
-    </tr>
-    @endforeach
-  </tbody>
-</table>
-</div>
+<p>Data Penjualan</p>
 </body>
 </html>
