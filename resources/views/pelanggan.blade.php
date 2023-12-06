@@ -21,6 +21,11 @@
     .btn{
       text-align: right;
     }
+    table, th, td {
+      border: 1px solid black;
+      border-collapse: collapse
+  
+    }
 </style>
 <nav class="navbar" style="background-color: pink;">
 <nav class="navbar navbar-expand-lg ">
@@ -32,9 +37,6 @@
     <ul class="navbar-nav">
     <li class="nav-item">
         <a class="nav-link" href="{{url('home')}}">Produk</a>
-      </li>
-    <li class="nav-item">
-        <a class="nav-link" href="{{url('tambah_pro')}}">Tambah Produk</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="{{url('tambah_pe')}}">Tambah Pelanggan</a>
@@ -51,7 +53,7 @@
 </div>
 
 <div class="btn">
-    <button type="button" class="btn btn-danger">Logout</button>
+    <a type="button" href="{{url('/logout')}}" class="btn btn-danger">Logout</a>
     </div>
 </nav>
 <br>

@@ -33,7 +33,7 @@
   <label for="exampleFormControlTextarea1" class="form-label">Alamat</label>
   <textarea class="form-control" id="exampleFormControlTextarea1" rows="1"name="Alamat">{{$pelanggan->Alamat}}</textarea>
  
-  <label for="exampleFormControlTextarea1" class="form-label">NomorTelepon</label>
+  <label for="exampleFormControlTextarea1" class="form-label">Nomor Telepon</label>
   <textarea class="form-control" id="exampleFormControlTextarea1" rows="1"name="NomorTelepon">{{$pelanggan->NomorTelepon}}</textarea>
  
 <div class="container">

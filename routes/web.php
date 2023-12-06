@@ -17,14 +17,22 @@ Route::get('/register', function () {
     return view('register');
 });
 
-Route::get('/home', [KasirController::class, 'home']);
-
 Route::post('register', [RegisterController::class,'proses_registrasi']);
-Route::get('/hapus_produk/{ProdukID}', [ProdukController::class,'hapus']);
+
+Route::middleware(['auth'])->group(function () {
+    
+Route::get('/logout', [LoginController::class,'logout']);
+Route::get('/home', [KasirController::class, 'home']);
+Route::get('/tambah_pe', [KasirController::class, 'tambah_pe']);
 Route::get('/tambah_pro', [KasirController::class, 'tambah_pro']);
 Route::get('/penjualan', [KasirController::class, 'penjualan']);
-Route::get('/home', [ProdukController::class, 'pro']);
+Route::get('/detail', [KasirController::class, 'detail']);
 
+Route::post('register', [RegisterController::class,'proses_registrasi']);
+
+Route::get('/hapus_produk/{ProdukID}', [ProdukController::class,'hapus']);
+Route::get('/home', [ProdukController::class, 'pro']);
+Route::get('/penjualan', [ProdukController::class, 'penjualan']);
 Route::post('/tambah_pro', [ProdukController::class,'proses_tambah']);
 Route::get ('/update_produk/{ProdukID}', [ProdukController::class,'update']);
 Route::post('/update_produk/{ProdukID}', [ProdukController::class,'proses_update']);
@@ -35,5 +43,6 @@ Route::get('/hapus_pelanggan/{PelangganID}', [PelangganController::class,'hapus'
 Route::get('/update_pelanggan/{PelangganID}', [PelangganController::class,'update']);
 Route::post('/update_pelanggan/{PelangganID}', [PelangganController::class,'proses_update']);
 
-Route::get('/tambah_pe', [KasirController::class, 'tambah_pe']);
+
 Route::post('/tambah_pe', [PelangganController::class, 'proses_tambah_pelanggan']);
+});

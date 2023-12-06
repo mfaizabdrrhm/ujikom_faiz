@@ -19,4 +19,10 @@ class LoginController extends Controller
                 return redirect('/login ')->with("error","ke pasar beli buah, username/password salah");
             }
         }
+
+        function logout(){
+            Auth::logout();
+
+            return redirect('/login');
+        }
     }

@@ -49,4 +49,10 @@ class ProdukController extends Controller
             ]);
             return redirect('/home');
         }
+        function penjualan(){
+            $penjualan = DB::table('penjualan')-> get();
+
+    
+            return view('penjualan',['penjualan'=> $penjualan]);
+        }
     }   

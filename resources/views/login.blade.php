@@ -25,10 +25,19 @@
       h1{
         font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
       }
+      .error{
+        font-style: italic;
+        text-align: center;
+        color: white;
+        background-color: red;
+        font-size: 30px;
+      }
 
 </style>
 <body>
-    
+  @if(session("error"))
+    <div class="error">{{session("error")}}</div>
+        @endif
     
     <div class="alok">
     <h1>Login</h1>

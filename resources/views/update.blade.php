@@ -26,16 +26,18 @@
       @csrf
  
     <div class="mb-3">
-  <label for="exampleFormControlTextarea1" class="form-label">Nama Produk</label>
-  <textarea class="form-control" id="exampleFormControlTextarea1" rows="1"name="NamaProduk">{{$produk->NamaProduk}}</textarea>
-
- 
+  <label for="exampleFormControlTextarea1" class="form-label">NamaProduk</label>
+  <br>
+  <textarea name="NamaProduk"rows="2" cols="30" minlength="10" maxlength="10">{{$produk->NamaProduk}}</textarea>
+  <br>
   <label for="exampleFormControlTextarea1" class="form-label">Harga</label>
-  <textarea class="form-control" id="exampleFormControlTextarea1" rows="1"name="Harga">{{$produk->Harga}}</textarea>
- 
+  <br>
+  <textarea name="Harga"rows="2" cols="30" minlength="10" maxlength="10">{{$produk->Harga}}</textarea>
+  <br>
   <label for="exampleFormControlTextarea1" class="form-label">Stok</label>
-  <textarea class="form-control" id="exampleFormControlTextarea1" rows="1"name="Stok">{{$produk->Stok}}</textarea>
- 
+  <br>
+  <textarea name="Stok"rows="2" cols="30" minlength="10" maxlength="10">{{$produk->Stok}}</textarea>
+  <br>
 <div class="container">
 <a href="{{url('home')}}"><button type="button" class="btn btn-secondary">Kembali</button</a>
 <button type="submit" class="btn btn-info" style="margin-left:15px;">Update</button>

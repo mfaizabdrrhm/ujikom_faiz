@@ -43,7 +43,7 @@
 </div>
 <div class="container">
 <a href="{{url('home')}}"><button type="button" class="btn btn-secondary">Kembali</button</a>
-<button type="submit" class="btn btn-info" style="margin-left:15px;">Tambah</button>
+<button type="submit" class="btn btn-info" style="margin-left:15px;">Tambah </button>
 </form>
 </div>
 </body>

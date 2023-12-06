@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PENJUALAN</title>
+    <title>DETAIL</title>
 </head>
 <link rel="stylesheet" href="bs/css/bootstrap.min.css">
 <body>
@@ -21,11 +21,6 @@
     .btn{
       text-align: right;
     }
-    table, th, td {
-      border: 1px solid black;
-      border-collapse: collapse
-  
-    }
 </style>
 <nav class="navbar" style="background-color: pink;">
 <nav class="navbar navbar-expand-lg ">
@@ -37,6 +32,9 @@
     <ul class="navbar-nav">
     <li class="nav-item">
         <a class="nav-link" href="{{url('home')}}">Produk</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{{url('penjualan')}}">Penjualan</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="{{url('pelanggan')}}">Pelanggan</a>
@@ -52,33 +50,5 @@
 </nav>
 <br>
 
-<p>Data Penjualan</p>
-<div class="container">
-<table class="table table-danger">
-<thead>
-    <tr>
-      <th scope="col">Id</th>
-      <th scope="col">Tanggal</th>
-      <th scope="col">Harga</th>
-      <th scope="col">Id Pelanggan</th>
-      <th scope="col">Opsi</th>
-    </tr>
-    
-  </thead>
-  <tbody>
-  @foreach ($penjualan as $penjualan)
-    <tr>
-      <td>{{$penjualan->PenjualanID}}</td>
-      <td>{{$penjualan->TanggalPenjualan}}</td>
-      <td>{{$penjualan->TotalHarga}}</td>
-      <td>{{$penjualan->PelangganID}}</td>
-
-      
-      <td><a href="{{url('detail')}}"><button type="button" class="btn btn-primary"><img src="storage/detail.png" alt=""width="40" height="30"></button></a></td>
-    </tr>
-    @endforeach
-  </tbody>
-</table>
-</div>
 </body>
 </html>

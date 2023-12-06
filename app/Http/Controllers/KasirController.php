@@ -18,5 +18,7 @@ class KasirController extends Controller
     function tambah_pe(){
         return view('tambah_pe');
     }
-    
+    function detail(){
+        return view('detail');
+    }
 }
