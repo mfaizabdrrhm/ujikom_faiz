@@ -20,21 +20,21 @@
           background-color: darkred;
         }
     </style>
-    <p>Update Produk</p>
-    <form action={{url("/update_produk/$produk->ProdukID")}} method="POST" enctype="multipart/form-data">
+    <p>Update Pelanggan</p>
+    <form action={{url("/update_pelanggan/$pelanggan->PelangganID")}} method="POST" enctype="multipart/form-data">
       @method('POST')
       @csrf
  
     <div class="mb-3">
-  <label for="exampleFormControlTextarea1" class="form-label">Nama Produk</label>
-  <textarea class="form-control" id="exampleFormControlTextarea1" rows="1"name="NamaProduk">{{$produk->NamaProduk}}</textarea>
+  <label for="exampleFormControlTextarea1" class="form-label">Nama</label>
+  <textarea class="form-control" id="exampleFormControlTextarea1" rows="1"name="NamaPelanggan">{{$pelanggan->NamaPelanggan}}</textarea>
 
  
-  <label for="exampleFormControlTextarea1" class="form-label">Harga</label>
-  <textarea class="form-control" id="exampleFormControlTextarea1" rows="1"name="Harga">{{$produk->Harga}}</textarea>
+  <label for="exampleFormControlTextarea1" class="form-label">Alamat</label>
+  <textarea class="form-control" id="exampleFormControlTextarea1" rows="1"name="Alamat">{{$pelanggan->Alamat}}</textarea>
  
-  <label for="exampleFormControlTextarea1" class="form-label">Stok</label>
-  <textarea class="form-control" id="exampleFormControlTextarea1" rows="1"name="Stok">{{$produk->Stok}}</textarea>
+  <label for="exampleFormControlTextarea1" class="form-label">NomorTelepon</label>
+  <textarea class="form-control" id="exampleFormControlTextarea1" rows="1"name="NomorTelepon">{{$pelanggan->NomorTelepon}}</textarea>
  
 <div class="container">
 <a href="{{url('home')}}"><button type="button" class="btn btn-secondary">Kembali</button</a>

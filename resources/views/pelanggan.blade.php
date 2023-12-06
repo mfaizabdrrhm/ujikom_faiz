@@ -3,11 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HOME</title>
+    <title>PELANGGAN</title>
 </head>
-
-<link rel="stylesheet" href="bs/css/bootstrap.min.css">
 <body>
+<link rel="stylesheet" href={{asset("bs/css/bootstrap.min.css")}}>
 <style>
     p{
         text-align: center;
@@ -56,31 +55,29 @@
     </div>
 </nav>
 <br>
-
-<p>Data Produk</p>
+<p>Data Pelanggan</p>
 <div class="container">
 <table class="table table-danger">
 <thead>
     <tr>
       <th scope="col">Id</th>
-      <th scope="col">Nama Produk</th>
-      <th scope="col">Harga</th>
-      <th scope="col">Stok</th>
+      <th scope="col">Nama</th>
+      <th scope="col">Alamat</th>
+      <th scope="col">NoTelp</th>
       <th scope="col">Opsi</th>
     </tr>
     
   </thead>
   <tbody>
-  @foreach ($produk as $produk)
+  @foreach ($pelanggan as $pelanggan)
     <tr>
-      <td>{{$produk->ProdukID}}</td>
-      <td>{{$produk->NamaProduk}}</td>
-      <td>{{$produk->Harga}}</td>
-      <td>{{$produk->Stok}}</td>
-
-      
-      <td><a href="update_produk/{{$produk->ProdukID}}"><button type="button" class="btn btn-success"><img src="storage/edit.png" alt=""width="40" height="30"></button></a>
-      <a href="hapus_produk/{{$produk->ProdukID}}"><button type="button" class="btn btn-danger"><img src="storage/sampah.png" alt=""width="40" height="30"></button></a></td>
+      <td>{{$pelanggan->PelangganID}}</td>
+      <td>{{$pelanggan->NamaPelanggan}}</td>
+      <td>{{$pelanggan->Alamat}}</td>
+      <td>{{$pelanggan->NomorTelepon}}</td>
+      <td>
+      <a href="update_pelanggan/{{$pelanggan->PelangganID}}"><button type="button" class="btn btn-success"><img src="storage/edit.png" alt=""width="40" height="30"></button></a>
+      <a href="hapus_pelanggan/{{$pelanggan->PelangganID}}"><button type="button" class="btn btn-danger"><img src="storage/sampah.png" alt=""width="40" height="30"></button></a></td>
     </tr>
     @endforeach
   </tbody>

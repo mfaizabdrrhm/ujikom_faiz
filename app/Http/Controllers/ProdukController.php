@@ -24,17 +24,13 @@ class ProdukController extends Controller
         }
         function proses_update(Request $request,$ProdukID){
 
-            $request->validate([
-                'Nama Produk' => 'required|min:2'
-            ]);
-    
-            $Nama_Produk = $request->Nama_Produk;
+            $NamaProduk = $request->NamaProduk;
             $Harga = $request->Harga;
             $Stok = $request->Stok;
                 
-            DB::table('produk')->where('produk',$ProdukID) -> update([
+            DB::table('produk')->where('ProdukID',$ProdukID) -> update([
                 
-                'Nama_Produk' => $Nama_Produk,
+                'NamaProduk' => $NamaProduk,
                 'Harga' => $Harga,
                 'Stok' => $Stok,
             ]);

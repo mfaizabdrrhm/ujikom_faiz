@@ -15,4 +15,8 @@ class KasirController extends Controller
     function penjualan(){
         return view('penjualan');
     }
+    function tambah_pe(){
+        return view('tambah_pe');
+    }
+    
 }
