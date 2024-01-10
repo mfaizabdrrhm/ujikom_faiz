@@ -27,6 +27,7 @@ Route::get('/tambah_pe', [KasirController::class, 'tambah_pe']);
 Route::get('/tambah_pro', [KasirController::class, 'tambah_pro']);
 Route::get('/penjualan', [KasirController::class, 'penjualan']);
 Route::get('/detail', [KasirController::class, 'detail']);
+Route::get('/detail', [ProdukController::class, 'detail']);
 
 Route::post('register', [RegisterController::class,'proses_registrasi']);
 

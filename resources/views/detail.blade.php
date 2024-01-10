@@ -49,6 +49,3 @@
     </div>
 </nav>
 <br>
-
-</body>
-</html>
