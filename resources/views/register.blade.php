@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html>
     <head>
-        <title>Daftar</title>
+        <title>DAFTAR</title>
         <link rel="stylesheet" href="bs/css/bootstrap.min.css">
     </head>
     <style>

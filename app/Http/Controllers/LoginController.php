@@ -13,7 +13,7 @@ class LoginController extends Controller
         function login(Request $request){
             $dataLogin = $request->only("username","password");
             if(Auth::attempt($dataLogin)){
-                return redirect('/home');
+                return redirect('/halaman');
             }
             else {
                 return redirect('/login ')->with("error","ke pasar beli buah, username/password salah");

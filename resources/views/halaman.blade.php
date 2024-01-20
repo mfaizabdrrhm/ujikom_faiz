@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HOME</title>
+    <title>HALAMAN DEPAN</title>
 </head>
-
+<body>
 <link rel="stylesheet" href="bs/css/bootstrap.min.css">
 <body>
 <style>
@@ -14,7 +14,7 @@
         font-size: 40px;
         font-family: 'Times New Roman', Times, serif;
         color: #ffffff;
-    
+            
     }
     body{
         background-color: darkred;
@@ -37,18 +37,14 @@
   <div class="collapse navbar-collapse" id="navbarNav">
     <ul class="navbar-nav">
     <li class="nav-item">
-        <a class="nav-link" href="{{url('halaman')}}">Home</a>
-      </li>
-    <li class="nav-item">
-        <a class="nav-link" href="{{url('tambah_pro')}}">Tambah Produk</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="{{url('pelanggan')}}">Pelanggan</a>
+        <a class="nav-link" href="{{url('home')}}">Produk</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="{{url('penjualan')}}">Penjualan</a>
       </li>
-    
+      <li class="nav-item">
+        <a class="nav-link" href="{{url('pelanggan')}}">Pelanggan</a>
+      </li>
     </ul>
   </div>
 </nav>
@@ -59,35 +55,8 @@
     </div>
 </nav>
 <br>
+<p>Selamat Datang</p>
+<img src="storage/aden.png" alt=""width="400" height="450">
 
-<p>Data Produk</p>
-<div class="container">
-<table class="table table-danger">
-<thead>
-    <tr>
-      <th scope="col">Id</th>
-      <th scope="col">Nama Produk</th>
-      <th scope="col">Harga</th>
-      <th scope="col">Stok</th>
-      <th scope="col">Opsi</th>
-    </tr>
-    
-  </thead>
-  <tbody>
-  @foreach ($produk as $produk)
-    <tr>
-      <td>{{$produk->ProdukID}}</td>
-      <td>{{$produk->NamaProduk}}</td>
-      <td>{{$produk->Harga}}</td>
-      <td>{{$produk->Stok}}</td>
-
-      
-      <td><a href="update_produk/{{$produk->ProdukID}}"><button type="button" class="btn btn-success"><img src="storage/edit.png" alt=""width="40" height="30"></button></a>
-      <a href="hapus_produk/{{$produk->ProdukID}}"><button type="button" class="btn btn-danger"><img src="storage/sampah.png" alt=""width="40" height="30"></button></a></td>
-    </tr>
-    @endforeach
-  </tbody>
-</table>
-</div>
 </body>
 </html>

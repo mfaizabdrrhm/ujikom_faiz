@@ -36,6 +36,9 @@
   <div class="collapse navbar-collapse" id="navbarNav">
     <ul class="navbar-nav">
     <li class="nav-item">
+        <a class="nav-link" href="{{url('halaman')}}">Home</a>
+      </li>
+    <li class="nav-item">
         <a class="nav-link" href="{{url('home')}}">Produk</a>
       </li>
       <li class="nav-item">
@@ -43,9 +46,6 @@
       </li>
       <li class="nav-item">
         <a class="nav-link" href="{{url('penjualan')}}">Penjualan</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="{{url('pelanggan')}}">Pelanggan</a>
       </li>
     </ul>
   </div>

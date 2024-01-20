@@ -21,4 +21,10 @@ class KasirController extends Controller
     function detail(){
         return view('detail');
     }
+    function halaman(){
+        return view('halaman');
+    }
+    //function tambah_penjualan(){
+     //   return view('tambah_penjualan');
+    //}
 }

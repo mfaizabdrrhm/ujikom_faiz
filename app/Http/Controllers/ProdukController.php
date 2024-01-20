@@ -12,6 +12,7 @@ class ProdukController extends Controller
     
             return view('home',['produk'=> $produk]);
         }
+        
         function hapus($ProdukID){
             DB::table('produk')->where('ProdukID','=',$ProdukID)->delete();
     
