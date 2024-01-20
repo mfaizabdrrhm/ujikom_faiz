@@ -40,10 +40,10 @@
         <a class="nav-link" href="{{url('home')}}">Produk</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="{{url('penjualan')}}">Penjualan</a>
+        <a class="nav-link" href="{{url('pelanggan')}}">Pelanggan</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="{{url('pelanggan')}}">Pelanggan</a>
+        <a class="nav-link" href="{{url('penjualan')}}">Penjualan</a>
       </li>
     </ul>
   </div>

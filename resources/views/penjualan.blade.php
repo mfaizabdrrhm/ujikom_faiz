@@ -44,6 +44,9 @@
       <li class="nav-item">
         <a class="nav-link" href="{{url('pelanggan')}}">Pelanggan</a>
       </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{{url('tambah_penjualan')}}">Tambah Penjualan</a>
+      </li>
     </ul>
   </div>
 </nav>

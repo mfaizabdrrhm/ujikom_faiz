@@ -41,6 +41,7 @@ Route::post('register', [RegisterController::class,'proses_registrasi']);
 
 Route::get('/hapus_produk/{ProdukID}', [ProdukController::class,'hapus']);
 
+Route::post('/tambah_penjualan', [PenjualanController::class,'store']);
 Route::get('/tambah_penjualan', [PenjualanController::class,'index']);
 Route::get('/penjualan', [ProdukController::class, 'penjualan']);
 Route::post('/tambah_pro', [ProdukController::class,'proses_tambah']);
