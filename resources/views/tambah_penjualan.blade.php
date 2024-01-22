@@ -15,6 +15,14 @@
         color: #ffffff;
         background-color: pink;
         }
+        p2{
+        font-size: 30px;
+        font-family: 'Times New Roman', Times, serif;
+        color: #ffffff;
+        top: 8px;
+        right: 16px;
+       
+        }
         p1{
         font-size: 30px;
         font-family: 'Times New Roman', Times, serif;
@@ -35,6 +43,14 @@
           width: 200px;
           padding: 10px;
 
+        }
+        .ui{
+          position: absolute;
+          top:90px;
+          right: 0;
+          width: 600px;
+          height: 100px;
+          left: 350px;
         }
         
     </style>
@@ -59,12 +75,33 @@
   @endforeach
 </select><br><br>
 <input type="number" name="qty" min="1" max="100" />
+
 <br><br>
+
 <button type="submit" class="btn btn-warning">Add</button>
 <br>
 <br>
+
 <br>
-<p1>Pelanggan</p1><br>
+
+<div class="ui">
+<p2>Isi Keranjang</p2>
+<table class="table table-danger">
+<thead>
+    <tr>
+      <th >Id</th>
+      <th >Produk</th>
+      <th >Harga</th>
+      <th >Jumlah</th>
+      <th >Total</th>
+    
+    </tr>
+    
+  </thead>
+  </table>
+  </div>
+  <br>
+  <p1>Pelanggan</p1><br>
 <select   aria-label="Default select example" name="pelanggan">
           <option selected>Pelanggan</option>
 
