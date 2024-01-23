@@ -9,6 +9,7 @@ class PenjualanController extends Controller
    function index(){
     $produk = DB::table("produk")->get();
     $pelanggan = DB::table("pelanggan")->get();
+
     
     $penjualan = DB::table("penjualan")->latest()->first();
 
@@ -19,10 +20,18 @@ class PenjualanController extends Controller
    }
 
    // return $idPenjualan;
-
-     return view("tambah_penjualan",['idPenjualan' => $idPenjualan,'produk' => $produk,'pelanggan'=> $pelanggan]);
+   $detailpenjualan = DB::table("detailpenjualan")->where("PenjualanID",$idPenjualan)
+   ->join("produk","detailpenjualan.ProdukID","=",'produk.ProdukID')
+   ->get();
+   
+     return view("tambah_penjualan",['detailpenjualan'=> $detailpenjualan,'idPenjualan' => $idPenjualan,'produk' => $produk,'pelanggan'=> $pelanggan]);
     }
     function store(Request $request){
+
+      $produk = DB::table('produk')->where('ProdukID',$request->produk)->first();
+     
+      $DataPenjualan = DB::table('penjualan')->where('PenjualanID',$request->idPenjualan)->first();
+      if(!$DataPenjualan){
       $penjualan = DB::table("penjualan")->insert([
          'PenjualanID' => $request->idPenjualan,
          'TanggalPenjualan' => date("Y-m-d"),
@@ -30,5 +39,19 @@ class PenjualanController extends Controller
          'PelangganID' => $request->pelanggan,
          'status' => "pending"
       ]);
-    return "ini cerita";}
+   }
+
+
+      $detailpenjualan = DB::table("detailpenjualan")->insert([
+         'PenjualanID'=> $request->idPenjualan,
+         'ProdukID'=>$request->produk,
+         'JumlahProduk'=>$request->qty,
+         'Subtotal'=> $request->qty * $produk->Harga
+
+      ]);
+      return redirect()->back();
+
+    }
+   
 }
+

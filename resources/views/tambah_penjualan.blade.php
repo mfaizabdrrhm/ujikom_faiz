@@ -52,6 +52,11 @@
           height: 100px;
           left: 350px;
         }
+        table, th, td {
+        border: 1px solid black;
+        border-collapse: collapse
+      
+        }
         
     </style>
         <p>Tambah Produk</p>
@@ -60,7 +65,7 @@
       @csrf
     <p1>Produk</p1><br>
     <input type="hidden" name="idPenjualan" value="{{$idPenjualan}}"/>
-        <select name="form-select" aria-label="Default select example" name="produk">
+        <select aria-label="Default select example" name="produk">
           
             <option selected>Product</option>
       {!--
@@ -96,13 +101,24 @@
       <th >Total</th>
     
     </tr>
-    
+    <tbody>
+      @foreach ($detailpenjualan as $detailpenjualan)
+    <tr>
+    <td>{{$detailpenjualan->PenjualanID}}</td>
+      <td>{{$detailpenjualan->NamaProduk}}</td>
+      <td>{{$detailpenjualan->Harga}}</td>
+      <td>{{$detailpenjualan->JumlahProduk}}</td>
+      <td>{{$detailpenjualan->Subtotal}}</td>
+
+    </tr>
+    </tbody>
+    @endforeach
   </thead>
   </table>
   </div>
   <br>
   <p1>Pelanggan</p1><br>
-<select   aria-label="Default select example" name="pelanggan">
+<select aria-label="Default select example" name="pelanggan">
           <option selected>Pelanggan</option>
 
   @foreach($pelanggan as $pelanggan)
