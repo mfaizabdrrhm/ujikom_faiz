@@ -57,9 +57,25 @@
         border-collapse: collapse
       
         }
+        .succes{
+        font-style: italic;
+        text-align: center;
+        color: white;
+        position: absolute;
+        bottom: 8px;
+        right: 16px;
+        font-size: 30px;
+      }
         
     </style>
+   
         <p>Tambah Produk</p>
+        @if(session("succes"))
+    <div class="succes">{{session("succes")}}</div>
+        @endif
+
+
+
     <form action='{{url("/tambah_penjualan") }}' method="post">
       @method('POST')
       @csrf
@@ -81,9 +97,23 @@
 </select><br><br>
 <input type="number" name="qty" min="1" max="100" />
 
+
 <br><br>
 
 <button type="submit" class="btn btn-warning">Add</button>
+
+<br>
+  <p1>Pelanggan</p1><br>
+<select aria-label="Default select example" name="pelanggan">
+          <option selected>Pelanggan</option>
+
+  @foreach($pelanggan as $pelanggan)
+<option value="{{$pelanggan->PelangganID}}">{{$pelanggan->NamaPelanggan}}</option>
+@endforeach
+</select>
+<br>
+<br>
+</form>
 <br>
 <br>
 
@@ -102,6 +132,7 @@
     
     </tr>
     <tbody>
+      <?php $total_harga = 0?>
       @foreach ($detailpenjualan as $detailpenjualan)
     <tr>
     <td>{{$detailpenjualan->PenjualanID}}</td>
@@ -109,21 +140,27 @@
       <td>{{$detailpenjualan->Harga}}</td>
       <td>{{$detailpenjualan->JumlahProduk}}</td>
       <td>{{$detailpenjualan->Subtotal}}</td>
-
+        <?php $total_harga = $total_harga + $detailpenjualan->Subtotal ?>
     </tr>
     </tbody>
     @endforeach
   </thead>
   </table>
-  </div>
-  <br>
-  <p1>Pelanggan</p1><br>
-<select aria-label="Default select example" name="pelanggan">
-          <option selected>Pelanggan</option>
+  <p1>Total Harga : {{number_format($total_harga,0,',',',')}}</p1>
 
-  @foreach($pelanggan as $pelanggan)
-<option value="{{$pelanggan->PelangganID}}">{{$pelanggan->NamaPelanggan}}</option>
-@endforeach
-</select>
+  <form class="d-grid gap-2 mt-3"action='{{url("/checkout/") }}' method="POST">
+  @method('POST')
+      @csrf
+        <input type="hidden" name="idPenjualan" value="{{$idPenjualan}}">
+        <input type="hidden" name="totalHarga" value="{{$total_harga}}">
+        <input type="submit" name="checkout" value="checkout" class="btn btn-primary">
+        
+</form>
+
+ 
+  </div>
+  
+ 
+
 </body>
 </html>

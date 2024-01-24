@@ -14,8 +14,10 @@ class PenjualanController extends Controller
     $penjualan = DB::table("penjualan")->latest()->first();
 
     $idPenjualan = "";
-    if(!$penjualan){$idPenjualan = '1';
-   }else{
+    if($penjualan->status=="selesai")
+      {$idPenjualan = $penjualan->PenjualanID + 1;
+   }
+   else{
       $idPenjualan = $penjualan->PenjualanID;
    }
 
@@ -49,9 +51,24 @@ class PenjualanController extends Controller
          'Subtotal'=> $request->qty * $produk->Harga
 
       ]);
+
+
+
+      DB::table("produk")->where('ProdukID',$request->produk)->update(['stok'=>$produk->Stok - $request->qty]);
+      
+      
       return redirect()->back();
 
     }
+    function checkout(Request $request){
+      $updateData = DB::table('penjualan')->where('PenjualanID',$request->idPenjualan)->update([
+         'status'=> "selesai",
+         'TotalHarga'=> $request->totalHarga
+      ]);
    
-}
+         return redirect()->back()->with("succes","Penjualan Telah Berhasil Ya....");
+      }
+    }
+   
+
 
