@@ -124,7 +124,6 @@
 <table class="table table-danger">
 <thead>
     <tr>
-      <th >Id</th>
       <th >Produk</th>
       <th >Harga</th>
       <th >Jumlah</th>
@@ -135,7 +134,6 @@
       <?php $total_harga = 0?>
       @foreach ($detailpenjualan as $detailpenjualan)
     <tr>
-    <td>{{$detailpenjualan->PenjualanID}}</td>
       <td>{{$detailpenjualan->NamaProduk}}</td>
       <td>{{$detailpenjualan->Harga}}</td>
       <td>{{$detailpenjualan->JumlahProduk}}</td>
@@ -146,7 +144,7 @@
     @endforeach
   </thead>
   </table>
-  <p1>Total Harga : {{number_format($total_harga,0,',',',')}}</p1>
+  <p1>Total Harga : {{number_format($total_harga,0, ',' , ',')}}</p1>
 
   <form class="d-grid gap-2 mt-3"action='{{url("/checkout/") }}' method="POST">
   @method('POST')
