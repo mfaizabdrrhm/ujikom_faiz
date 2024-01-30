@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="wnameth=device-wnameth, initial-scale=1.0">
-    <title>TAMBAH</title>
+    <title>Web Kasir</title>
     <link rel="stylesheet" href="bs/css/bootstrap.min.css">
 </head>
 <body>

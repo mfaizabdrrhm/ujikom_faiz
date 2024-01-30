@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="bs/css/bootstrap.min.css">
-    <title>PEN</title>
+    <title>Web Kasir</title>
 </head>
 <body>
 <style>
@@ -144,7 +144,7 @@
     @endforeach
   </thead>
   </table>
-  <p1>Total Harga : {{number_format($total_harga,0, ',' , ',')}}</p1>
+  <p1>Total Harga : {{number_format($total_harga,0, ',' ,  ',')}}</p1>
 
   <form class="d-grid gap-2 mt-3"action='{{url("/checkout/") }}' method="POST">
   @method('POST')
