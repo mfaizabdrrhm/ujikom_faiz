@@ -32,7 +32,7 @@
   <br>
   <label for="exampleFormControlTextarea1" class="form-label">Harga</label>
   <br>
-  <textarea name="Harga"rows="2" cols="30" minlength="10" maxlength="10">{{$produk->Harga}}</textarea>
+  <textarea name="Harga"rows="2" cols="30" minlength="4" maxlength="4">{{$produk->Harga}}</textarea>
   <br>
   <label for="exampleFormControlTextarea1" class="form-label">Stok</label>
   <br>

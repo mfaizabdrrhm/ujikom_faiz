@@ -27,6 +27,7 @@
       border-collapse: collapse
       
     }
+   
 </style>
 <nav class="navbar" style="background-color: pink;">
 <nav class="navbar navbar-expand-lg ">
@@ -55,7 +56,8 @@
     </div>
 </nav>
 <br>
-<p>Selamat Datang</p>
+
+<p>Selamat Datang {{auth()->user()->username}}</p>
 <img src="storage/aden.png" alt=""width="400" height="450">
 
 </body>

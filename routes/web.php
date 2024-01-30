@@ -37,8 +37,6 @@ Route::get('/penjualan', [KasirController::class, 'penjualan']);
 Route::get('/detail', [KasirController::class, 'detail']);
 Route::get('/detail', [ProdukController::class, 'detail']);
 
-Route::post('register', [RegisterController::class,'proses_registrasi']);
-
 Route::get('/hapus_produk/{ProdukID}', [ProdukController::class,'hapus']);
 
 Route::post('/checkout', [PenjualanController::class,'checkout']);

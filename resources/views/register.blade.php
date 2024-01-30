@@ -30,10 +30,9 @@
     <body>
         <div class="daftar">
           <h2>Registrasi</h2>
-            <form method="POST" action="register"> 
+            <form method="POST" action="{{url('register')}}"> 
               @method('POST')
               @csrf
-                <input name="tujuan" type="hidden" value="Daftar" >
                 <div class="Daftar">
               
                 <label>Nama</label>
@@ -50,7 +49,7 @@
                 <br>
                 <label>Telp</label>
                 <br>
-                <input name="telp" type="telp" required >
+                <input name="telp" type="text" required >
                 <br>
                 <label>Level</label>
                 <br>

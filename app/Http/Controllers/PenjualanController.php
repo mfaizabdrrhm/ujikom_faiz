@@ -43,7 +43,9 @@ class PenjualanController extends Controller
       ]);
    }
 
-
+      if($produk->Stok - $request->qty < 0){
+      return redirect()->back()->with("info","Stok Tidak Mencukupi");
+   }else{
       $detailpenjualan = DB::table("detailpenjualan")->insert([
          'PenjualanID'=> $request->idPenjualan,
          'ProdukID'=>$request->produk,
@@ -60,6 +62,7 @@ class PenjualanController extends Controller
       return redirect()->back();
 
     }
+    }
     function checkout(Request $request){
       $updateData = DB::table('penjualan')->where('PenjualanID',$request->idPenjualan)->update([
          'status'=> "selesai",
@@ -72,3 +75,4 @@ class PenjualanController extends Controller
    
 
 
+   

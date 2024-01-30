@@ -70,10 +70,16 @@
     </style>
    
         <p>Tambah Produk</p>
+
+        @if(session("info"))
+    <div class="succes">{{session("info")}}</div>
+        @endif
+
+
+
         @if(session("succes"))
     <div class="succes">{{session("succes")}}</div>
         @endif
-
 
 
     <form action='{{url("/tambah_penjualan") }}' method="post">
@@ -104,7 +110,7 @@
 
 <br>
   <p1>Pelanggan</p1><br>
-<select aria-label="Default select example" name="pelanggan">
+<select aria-label="Default select example" name="pelanggan" >
           <option selected>Pelanggan</option>
 
   @foreach($pelanggan as $pelanggan)
@@ -159,6 +165,6 @@
   </div>
   
  
-
+  <a href="{{url('penjualan')}}"><button type="button" class="btn btn-secondary">Kembali</button</a>
 </body>
 </html>
