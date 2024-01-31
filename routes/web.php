@@ -34,12 +34,17 @@ Route::get('/tambah_pro', [KasirController::class, 'tambah_pro']);
 
 Route::get('/penjualan', [KasirController::class, 'penjualan']);
 
-Route::get('/detail', [KasirController::class, 'detail']);
-Route::get('/detail', [ProdukController::class, 'detail']);
+
+
+Route::get('/detail_penjualan/{id}', [PenjualanController::class,'detail_penjualan']);
 
 Route::get('/hapus_produk/{ProdukID}', [ProdukController::class,'hapus']);
 
+
+
 Route::post('/checkout', [PenjualanController::class,'checkout']);
+
+
 
 Route::post('/tambah_penjualan', [PenjualanController::class,'store']);
 Route::get('/tambah_penjualan', [PenjualanController::class,'index']);

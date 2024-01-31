@@ -56,12 +56,5 @@ class ProdukController extends Controller
     
             return view('penjualan',['penjualan'=> $penjualan]);
         }
-        function detail(){
-            $detail = DB::table('produk')
-            ->join('detailpenjualan', 'PenjualanID', '=', 'PenjualanID')
-            ->select('produk*', 'detailpenjualan.*')
-            ->get();
-
-            return view('detail',['detailpenjualan'=> $detail]);
-        }
+       
     }   

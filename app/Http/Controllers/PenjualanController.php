@@ -71,7 +71,26 @@ class PenjualanController extends Controller
    
          return redirect()->back()->with("succes","Penjualan Telah Berhasil Ya....");
       }
+      function detail_penjualan($id){
+         $penjualan = DB::table('penjualan')->where('PenjualanID',$id)
+         ->join('pelanggan', 'penjualan.PelangganID', '=','pelanggan.PelangganID')
+         ->get();
+         $detailPenjualan = DB::table('detailpenjualan')->where('PenjualanID',$id)
+         ->join('produk','detailpenjualan.ProdukID','=','produk.ProdukID')
+         ->get();
+
+
+         return view("detail",['detailpenjualan'=> $detailPenjualan,'penjualan' => $penjualan]);
+      }
+      // function data_penjualan($id){
+      //    $penjualan = DB::table('penjualan')->where('PenjualanID',$id)
+      //    ->get();
+      //    $pelanggan = DB::table('pelanggan')->where('PelangganID',$id)
+      //    ->join('pelanggan','penjualan.')
+      // }
     }
+
+   
    
 
 

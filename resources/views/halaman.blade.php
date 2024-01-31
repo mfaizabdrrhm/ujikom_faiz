@@ -57,7 +57,7 @@
 </nav>
 <br>
 
-<p>Selamat Datang {{auth()->user()->username}}</p>
+<p>Selamat Datang {{auth()->user()->nama}}</p>
 <img src="storage/aden.png" alt=""width="400" height="450">
 
 </body>

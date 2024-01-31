@@ -80,7 +80,8 @@
       <td>{{$penjualan->PelangganID}}</td>
 
       
-      <td><a href="{{url('detail')}}"><button type="button" class="btn btn-primary"><img src="storage/detail.png" alt=""width="40" height="30"></button></a></td>
+      <td>
+        <a href="detail_penjualan/{{$penjualan->PenjualanID}}"><button type="button" class="btn btn-primary"><img src="storage/detail.png" alt=""width="40" height="30"></button></a></td>
     </tr>
     @endforeach
   </tbody>

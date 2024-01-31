@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Web Kasir</title>
 </head>
-<link rel="stylesheet" href="bs/css/bootstrap.min.css">
+<link rel="stylesheet" href={{asset("bs/css/bootstrap.min.css")}}>
 <body>
 <style>
     p{
@@ -21,6 +21,11 @@
     .btn{
       text-align: right;
     }
+    table, th, td {
+      border: 1px solid black;
+      border-collapse: collapse
+      
+    }
 </style>
 <nav class="navbar" style="background-color: pink;">
 <nav class="navbar navbar-expand-lg ">
@@ -31,6 +36,9 @@
   <div class="collapse navbar-collapse" id="navbarNav">
     <ul class="navbar-nav">
     <li class="nav-item">
+        <a class="nav-link" href="{{url('halaman')}}">Home</a>
+      </li>
+    <li class="nav-item">
         <a class="nav-link" href="{{url('home')}}">Produk</a>
       </li>
       <li class="nav-item">
@@ -38,6 +46,9 @@
       </li>
       <li class="nav-item">
         <a class="nav-link" href="{{url('pelanggan')}}">Pelanggan</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{{url('penjualan')}}">Penjualan</a>
       </li>
     </ul>
   </div>
@@ -48,4 +59,34 @@
     <a type="button" href="{{url('/logout')}}" class="btn btn-danger">Logout</a>
     </div>
 </nav>
+
 <br>
+<p>Detail</p>
+<div class="container">
+<table class="table table-danger">
+<thead>
+    <tr>
+      <th scope="col">Nama Produk</th>
+      <th scope="col">Harga</th>
+      <th scope="col">Qty</th>
+      <th scope="col">Subtotal</th>
+    </tr>
+    
+  </thead>
+  <tbody>
+  @foreach ($detailpenjualan as $detailpenjualan)
+    <tr>
+      <td>{{$detailpenjualan->NamaProduk}}</td>
+      <td>{{$detailpenjualan->Harga}}</td>
+      <td>{{$detailpenjualan->JumlahProduk}}</td>
+      <td>{{$detailpenjualan->Subtotal}}</td>
+       
+    </tr>
+    </tbody>
+    @endforeach
+  </thead>
+  </table>
+</table>
+</div>
+</body>
+</html>
