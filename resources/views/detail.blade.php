@@ -29,7 +29,7 @@
 </style>
 <nav class="navbar" style="background-color: pink;">
 <nav class="navbar navbar-expand-lg ">
-  <img src="storage/aden.png" alt=""width="70" height="60">
+  <img src={{asset("storage/aden.png")}} alt=""width="70" height="60">
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -62,6 +62,34 @@
 
 <br>
 <p>Detail</p>
+
+<div class="container">
+<table class="table table-danger">
+<thead>
+    <tr>
+      <th scope="col">Tanggal Penjualan</th>
+      <th scope="col">Total</th>
+      <th scope="col">Nama Pelanggan</th>
+
+    </tr>
+    
+  </thead>
+  <tbody>
+  @foreach ($penjualan as $penjualan)
+    <tr>
+      <td>{{$penjualan->TanggalPenjualan}}</td>
+      <td>{{$penjualan->TotalHarga}}</td>
+      <td>{{$penjualan->NamaPelanggan}}</td>
+
+       
+    </tr>
+    </tbody>
+    @endforeach
+  </thead>
+  </table>
+</table>
+</div>
+
 <div class="container">
 <table class="table table-danger">
 <thead>

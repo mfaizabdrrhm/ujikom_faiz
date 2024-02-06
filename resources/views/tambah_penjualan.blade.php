@@ -167,4 +167,4 @@
  
   <a href="{{url('penjualan')}}"><button type="button" class="btn btn-secondary">Kembali</button</a>
 </body>
-</html>p
+</html>

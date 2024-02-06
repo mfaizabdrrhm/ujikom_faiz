@@ -28,7 +28,7 @@
     <div class="mb-3">
   <label for="exampleFormControlTextarea1" class="form-label">NamaProduk</label>
   <br>
-  <textarea name="NamaProduk"rows="2" cols="30" minlength="10" maxlength="10">{{$produk->NamaProduk}}</textarea>
+  <textarea name="NamaProduk"rows="2" cols="30" minlength="1" maxlength="10">{{$produk->NamaProduk}}</textarea>
   <br>
   <label for="exampleFormControlTextarea1" class="form-label">Harga</label>
   <br>
@@ -36,7 +36,7 @@
   <br>
   <label for="exampleFormControlTextarea1" class="form-label">Stok</label>
   <br>
-  <textarea name="Stok"rows="2" cols="30" minlength="10" maxlength="10">{{$produk->Stok}}</textarea>
+  <textarea name="Stok"rows="2" cols="30" minlength="1" maxlength="100">{{$produk->Stok}}</textarea>
   <br>
 <div class="container">
 <a href="{{url('home')}}"><button type="button" class="btn btn-secondary">Kembali</button</a>
