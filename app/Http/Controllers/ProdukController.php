@@ -25,8 +25,7 @@ class ProdukController extends Controller
         }
         function proses_update(Request $request,$ProdukID){
 
-            $Nama
-            Produk = $request->NamaProduk;
+            $NamaProduk = $request->NamaProduk;
             $Harga = $request->Harga;
             $Stok = $request->Stok;
                 
