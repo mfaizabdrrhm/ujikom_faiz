@@ -98,7 +98,7 @@
     
 
     @foreach($produk as $produk)
-  <option value="{{$produk->ProdukID}}">{{$produk->NamaProduk}}</option>
+  <option value="{{$produk->ProdukID}}" required >{{$produk->NamaProduk}}</option>
   @endforeach
 </select><br><br>
 <input type="number" name="qty" min="1" max="100" />
