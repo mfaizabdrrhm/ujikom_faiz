@@ -8,12 +8,19 @@
 </head>
 <body>
 <style>
+        a{
+          margin: 10px;
+        }
+        button{
+          margin: 10px;
+        }
         p{
         text-align: center;
         font-size: 40px;
         font-family: 'Times New Roman', Times, serif;
         color: #ffffff;
         background-color: pink;
+        
         }
         p2{
         font-size: 30px;
@@ -27,6 +34,7 @@
         font-size: 30px;
         font-family: 'Times New Roman', Times, serif;
         color: #ffffff;
+        margin: 10px;
         }
         body{
           background-color: darkred;
@@ -38,11 +46,12 @@
         select{
           width: 200px;
           padding: 10px;
+          margin: 10px;
         }
         input{
           width: 200px;
           padding: 10px;
-
+          margin: 10px;
         }
         .ui{
           position: absolute;
@@ -106,7 +115,7 @@
 
 <br><br>
 
-<button type="submit" class="btn btn-warning">Add</button>
+<button type="submit" class="btn btn-warning" >Add</button>
 
 <br>
   <p1>Pelanggan</p1><br>

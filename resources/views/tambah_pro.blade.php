@@ -21,6 +21,7 @@
         .qmi{
             color: #ffffff;
             font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            margin: 10px;
         }
         
     </style>

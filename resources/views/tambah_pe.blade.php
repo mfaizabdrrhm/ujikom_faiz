@@ -21,7 +21,9 @@
         .qmi{
             color: #ffffff;
             font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            margin: 10px;
         }
+        
         
     </style>
     <form action="tambah_pe" method="POST" enctype="multipart/form-data">
@@ -42,7 +44,7 @@
     <br><br>
 </div>
 <div class="container">
-<a href="{{url('home')}}"><button type="button" class="btn btn-secondary">Kembali</button</a>
+<a href="{{url('pelanggan')}}"><button type="button" class="btn btn-secondary">Kembali</button</a>
 <button type="submit" class="btn btn-info" style="margin-left:15px;">Tambah </button>
 </form>
 </div>
