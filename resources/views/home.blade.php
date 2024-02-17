@@ -30,7 +30,7 @@
 </style>
 <nav class="navbar" style="background-color: pink;">
 <nav class="navbar navbar-expand-lg ">
-  <img src="storage/aden.png" alt=""width="70" height="60">
+  <img src="storage/den.png" alt=""width="70" height="60">
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
