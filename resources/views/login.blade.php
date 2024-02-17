@@ -46,7 +46,7 @@
     @csrf
     <br>
   
-    <label>Email</label>
+    <label>Username</label>
     <br>
     <input name="username" type="text"id="username">
     <br>
