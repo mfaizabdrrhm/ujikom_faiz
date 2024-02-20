@@ -42,7 +42,7 @@
                 <label>Username</label>
                 <br>
                 <input name="username" type="text" required >
-                <br>
+                 <br>
                 <label>Password</label>
                 <br>
                 <input name="password" type="password" required >
