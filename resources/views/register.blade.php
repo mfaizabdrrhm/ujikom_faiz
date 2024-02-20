@@ -51,7 +51,13 @@
                 <br>
                 <input name="telp" type="text" required >
                 <br>
-               
+                <label>Status</label>
+                <br>
+                  <select name="status">
+                    <option value="petugas">Petugas</option>
+                    <option value="admin">Admin</option>
+
+                  </select>
                   <br>
                   <br>
                 <button type="submit" class="btn btn-outline-dark">Registrasi</button>
