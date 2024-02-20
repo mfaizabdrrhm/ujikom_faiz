@@ -14,7 +14,7 @@
         font-size: 40px;
         font-family: 'Times New Roman', Times, serif;
         color: #ffffff;
-            
+
     }
     body{
         background-color: darkred;
@@ -25,9 +25,9 @@
     table, th, td {
       border: 1px solid black;
       border-collapse: collapse
-      
+
     }
-   
+
 </style>
 <nav class="navbar" style="background-color: pink;">
 <nav class="navbar navbar-expand-lg ">
