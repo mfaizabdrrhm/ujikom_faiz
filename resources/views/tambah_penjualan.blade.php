@@ -71,14 +71,14 @@
         text-align: center;
         color: white;
         position: absolute;
-        bottom: 8px;
+        top: 70px;
         right: 16px;
         font-size: 30px;
       }
         
     </style>
    
-        <p>Tambah Produk</p>
+        <p>Orders</p>
 
         @if(session("info"))
     <div class="succes">{{session("info")}}</div>
@@ -110,7 +110,7 @@
   <option value="{{$produk->ProdukID}}" required >{{$produk->NamaProduk}}</option>
   @endforeach
 </select><br><br>
-<input type="number" name="qty" min="1" max="100" />
+<input type="number" name="qty" min="1" max="100" placeholder="Jumlah"/>
 
 
 <br><br>

@@ -27,17 +27,20 @@
  
     <div class="mb-3">
   <label for="exampleFormControlTextarea1" class="form-label">Nama</label>
-  <textarea class="form-control" id="exampleFormControlTextarea1" rows="1"name="NamaPelanggan">{{$pelanggan->NamaPelanggan}}</textarea>
+  <br>
+  <textarea name="NamaPelanggan"rows="2" cols="30" minlength="1" maxlength="10">{{$pelanggan->NamaPelanggan}}</textarea>
 
- 
+ <br>
   <label for="exampleFormControlTextarea1" class="form-label">Alamat</label>
-  <textarea class="form-control" id="exampleFormControlTextarea1" rows="1"name="Alamat">{{$pelanggan->Alamat}}</textarea>
- 
+  <br>
+  <textarea name="Alamat"rows="2" cols="30" minlength="1" maxlength="10">{{$pelanggan->Alamat}}</textarea>
+ <br>
   <label for="exampleFormControlTextarea1" class="form-label">Nomor Telepon</label>
-  <textarea class="form-control" id="exampleFormControlTextarea1" rows="1"name="NomorTelepon">{{$pelanggan->NomorTelepon}}</textarea>
+  <br>
+  <textarea name="NomorTelepon"rows="2" cols="30" minlength="1" maxlength="10">{{$pelanggan->NomorTelepon}}</textarea>
  
 <div class="container">
-<a href="{{url('home')}}"><button type="button" class="btn btn-secondary">Kembali</button</a>
+<a href="{{url('pelanggan')}}"><button type="button" class="btn btn-secondary">Kembali</button</a>
 <button type="submit" class="btn btn-info" style="margin-left:15px;">Update</button>
 </div>
 </body>
