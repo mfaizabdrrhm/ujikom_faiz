@@ -55,8 +55,8 @@ class PenjualanController extends Controller
       ]);
 
 
+     
 
-      DB::table("produk")->where('ProdukID',$request->produk)->update(['stok'=>$produk->Stok - $request->qty]);
       
       
       return redirect()->back();
@@ -64,14 +64,20 @@ class PenjualanController extends Controller
     }
     }
     function checkout(Request $request){
+    
       $updateData = DB::table('penjualan')->where('PenjualanID',$request->idPenjualan)->update([
          'status'=> "selesai",
          'TotalHarga'=> $request->totalHarga
       ]);
    
          return redirect()->back()->with("succes","Penjualan Telah Berhasil Ya....");
+
+         $produk = DB::table('produk')->where('ProdukID',$request->produk)->first();
+
+         DB::table("produk")->where('ProdukID',$request->produk)->update(['stok'=> $produk->Stok - $request->qty]);
       }
       function detail_penjualan($id){
+         
          $penjualan = DB::table('penjualan')->where('PenjualanID',$id)
          ->join('pelanggan', 'penjualan.PelangganID', '=','pelanggan.PelangganID')
          ->get();
@@ -82,12 +88,10 @@ class PenjualanController extends Controller
 
          return view("detail",['detailpenjualan'=> $detailPenjualan,'penjualan' => $penjualan]);
       }
-      // function data_penjualan($id){
-      //    $penjualan = DB::table('penjualan')->where('PenjualanID',$id)
-      //    ->get();
-      //    $pelanggan = DB::table('pelanggan')->where('PelangganID',$id)
-      //    ->join('pelanggan','penjualan.')
-      // }
+      function hapus_penjualan(request $request, $id){
+         DB::table('detailpenjualan')->where('ProdukID' ,'=',$id)->delete();
+          return redirect()->back();
+      }
     }
 
    

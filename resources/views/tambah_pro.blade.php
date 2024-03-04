@@ -36,10 +36,10 @@
     <input name="NamaProduk" type="text"id="NamaProduk">
     <br><br>
     <label>Harga</label><br>
-    <input name="Harga" type="text"id="Harga">
+    <input name="Harga" type="number"id="Harga">
     <br><br>
     <label>Stok</label><br>
-    <input name="Stok" type="text"id="Stok">
+    <input name="Stok" type="number"id="Stok">
     <br><br>
 </div>
 <div class="container">

@@ -43,7 +43,7 @@ Route::get('/detail_penjualan/{id}', [PenjualanController::class,'detail_penjual
 
 Route::get('/hapus_produk/{ProdukID}', [ProdukController::class,'hapus']);
 
-
+Route::get('/hapus_penjualan/{ProdukID}', [PenjualanController::class,'hapus_penjualan']);
 
 Route::post('/checkout', [PenjualanController::class,'checkout']);
 

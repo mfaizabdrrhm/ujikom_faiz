@@ -143,7 +143,7 @@
       <th >Harga</th>
       <th >Jumlah</th>
       <th >Total</th>
-    
+      <th >Opsi</th>
     </tr>
     <tbody>
       <?php $total_harga = 0?>
@@ -154,6 +154,7 @@
       <td>{{$detailpenjualan->JumlahProduk}}</td>
       <td>{{$detailpenjualan->Subtotal}}</td>
         <?php $total_harga = $total_harga + $detailpenjualan->Subtotal ?>
+        <td> <a href="hapus_penjualan/{{$detailpenjualan->ProdukID}}"<button type="button" class="btn btn-danger"><img src="storage/sampah.png" alt=""width="20" height="30"></button></a></td>
     </tr>
     </tbody>
     @endforeach

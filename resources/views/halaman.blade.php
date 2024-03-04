@@ -50,11 +50,8 @@
   </div>
 </nav>
 </div>
-
 <div class="btn">
     <a type="button" href="{{url('/register')}}" class="btn btn-warning">Register</a>
-    </div>
-<div class="btn">
     <a type="button" href="{{url('/logout')}}" class="btn btn-danger">Logout</a>
     </div>
 </nav>
