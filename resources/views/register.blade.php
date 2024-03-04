@@ -61,7 +61,7 @@
                   <br>
                   <br>
                 <button type="submit" class="btn btn-outline-dark">Registrasi</button>
-                <a href="{{url('login')}}"><button type="button" class="btn btn-outline-dark">Kembali</button></a>
+                <a href="{{url('halaman')}}"><button type="button" class="btn btn-outline-dark">Kembali</button></a>
     </form>
     </body>
     </html>

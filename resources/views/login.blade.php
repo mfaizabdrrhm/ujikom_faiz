@@ -56,7 +56,7 @@
 <br>
 <br>
 <button type="submit" class="btn btn-outline-dark">Login</button>
-<a href="{{url('register')}}"><button type="button" class="btn btn-outline-dark">Registrasi</button></a>
+
 </form>
 </div>
 </body>

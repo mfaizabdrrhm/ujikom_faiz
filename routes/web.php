@@ -14,11 +14,14 @@ Route::get('/', function () {
 Route::post('/login', [LoginController::class,'login'])->name("login");
 Route::get('/login', [LoginController::class,'index']);
 
+Route::group(['middleware' => ['Admin']],function(){
 Route::get('/register', function () {
     return view('register');
 });
 
 Route::post('register', [RegisterController::class,'proses_registrasi']);
+});
+
 
 Route::middleware(['auth'])->group(function () {
     
