@@ -16,7 +16,7 @@
     
     }
     body{
-        background-color: darkred;
+        background-color: darkgoldenrod;
     }
     .btn{
       text-align: right;
@@ -29,7 +29,6 @@
 </style>
 <nav class="navbar" style="background-color: pink;">
 <nav class="navbar navbar-expand-lg ">
-  <img src="storage/den.png" alt=""width="70" height="60">
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -38,12 +37,13 @@
     <li class="nav-item">
         <a class="nav-link" href="{{url('halaman')}}">Home</a>
       </li>
-    <li class="nav-item">
-        <a class="nav-link" href="{{url('home')}}">Produk</a>
-      </li>
       <li class="nav-item">
         <a class="nav-link" href="{{url('tambah_pe')}}">Tambah Pelanggan</a>
       </li>
+    <li class="nav-item">
+        <a class="nav-link" href="{{url('home')}}">Produk</a>
+      </li>
+      
       <li class="nav-item">
         <a class="nav-link" href="{{url('penjualan')}}">Penjualan</a>
       </li>

@@ -15,11 +15,11 @@ Route::post('/login', [LoginController::class,'login'])->name("login");
 Route::get('/login', [LoginController::class,'index']);
 
 Route::group(['middleware' => ['Admin']],function(){
-Route::get('/register', function () {
-    return view('register');
+    Route::post('register', [RegisterController::class,'proses_registrasi']);
+    Route::get('/register', function () {
+        return view('register');
 });
 
-Route::post('register', [RegisterController::class,'proses_registrasi']);
 });
 
 
@@ -54,8 +54,8 @@ Route::get('/tambah_penjualan', [PenjualanController::class,'index']);
 Route::get('/penjualan', [ProdukController::class, 'penjualan']);
 Route::post('/tambah_pro', [ProdukController::class,'proses_tambah']);
 
-Route::get ('/update_produk/{ProdukID}', [ProdukController::class,'update']);
-Route::post('/update_produk/{ProdukID}', [ProdukController::class,'proses_update']);
+Route::get ('/update_produk/{produkID}', [ProdukController::class,'update']);
+Route::post('/update_produk/{produkID}', [ProdukController::class,'proses_update']);
 
 Route::get('/pelanggan', [PelangganController::class,'index']);
 Route::get('/pelanggan', [PelangganController::class, 'po']);

@@ -16,7 +16,7 @@
     
     }
     body{
-        background-color: darkred;
+        background-color: gray;
     }
     .btn{
       text-align: right;
@@ -29,7 +29,6 @@
 </style>
 <nav class="navbar" style="background-color: pink;">
 <nav class="navbar navbar-expand-lg ">
-  <img src={{asset("storage/den.png")}} alt=""width="70" height="60">
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -104,8 +103,8 @@
   <tbody>
   @foreach ($detailpenjualan as $detailpenjualan)
     <tr>
-      <td>{{$detailpenjualan->NamaProduk}}</td>
-      <td>{{$detailpenjualan->Harga}}</td>
+      <td>{{$detailpenjualan->nama_produk}}</td>
+      <td>{{$detailpenjualan->harga}}</td>
       <td>{{$detailpenjualan->JumlahProduk}}</td>
       <td>{{$detailpenjualan->Subtotal}}</td>
        

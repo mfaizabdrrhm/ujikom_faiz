@@ -16,7 +16,7 @@
         background-color: pink;
         }
         body{
-          background-color: darkred;
+          background-color: gray;
         }
         .qmi{
             color: #ffffff;
@@ -31,19 +31,22 @@
     
     <p>Tambah Produk</p>
     <div class="qmi">
- 
-    <label>Nama Produk</label><br>
-    <input name="NamaProduk" type="text"id="NamaProduk">
+      
+    <label>Nama Produk</label>
+    <br>
+    <input name="nama_produk" type="text"id="nama_produk">
     <br><br>
-    <label>Harga</label><br>
-    <input name="Harga" type="number"id="Harga">
+    <label>Harga</label>
+    <br>
+    <input name="harga" type="number"id="harga">
     <br><br>
-    <label>Stok</label><br>
-    <input name="Stok" type="number"id="Stok">
+    <label>Stok</label>
+    <br>
+    <input name="stok" type="number"id="stok">
     <br><br>
 </div>
 <div class="container">
-<a href="{{url('home')}}"><button type="button" class="btn btn-secondary">Kembali</button</a>
+<a href="{{url('home')}}"><button type="button" class="btn btn-info">Kembali</button</a>
 <button type="submit" class="btn btn-info" style="margin-left:15px;">Tambah</button>
 </form>
 </div>

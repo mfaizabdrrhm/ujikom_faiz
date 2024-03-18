@@ -47,10 +47,6 @@
                 <br>
                 <input name="password" type="password" required >
                 <br>
-                <label>Telp</label>
-                <br>
-                <input name="telp" type="text" required >
-                <br>
                 <label>Status</label>
                 <br>
                   <select name="status">

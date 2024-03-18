@@ -17,7 +17,7 @@
 
     }
     body{
-        background-color: darkred;
+        background-color: blue;
     }
     .btn{
       text-align: right;
@@ -31,7 +31,6 @@
 </style>
 <nav class="navbar" style="background-color: pink;">
 <nav class="navbar navbar-expand-lg ">
-  <img src="storage/den.png" alt=""width="70" height="60">
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -40,25 +39,24 @@
     <li class="nav-item">
         <a class="nav-link" href="{{url('home')}}">Produk</a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="{{url('pelanggan')}}">Pelanggan</a>
+       <li class="nav-item">
+        <a class="nav-link" href="{{url('penjualan')}}">Penjualan</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="{{url('penjualan')}}">Penjualan</a>
+        <a class="nav-link" href="{{url('pelanggan')}}">Pelanggan</a>
       </li>
     </ul>
   </div>
 </nav>
 </div>
 <div class="btn">
-    <a type="button" href="{{url('/register')}}" class="btn btn-warning">Register</a>
     <a type="button" href="{{url('/logout')}}" class="btn btn-danger">Logout</a>
+   <a type="button" href="{{url('/register')}}" class="btn btn-danger">Register</a>
     </div>
 </nav>
 <br>
 
 <p>Selamat Datang {{auth()->user()->nama}}</p>
-<img src="storage/den.png" alt=""width="400" height="450">
 
 </body>
 </html>

@@ -16,7 +16,7 @@ class LoginController extends Controller
                 return redirect('/halaman');
             }
             else {
-                return redirect('/login ')->with("error","ke pasar beli buah, username/password salah");
+                return redirect('/login ')->with("error","username/password salah");
             }
         }
 

@@ -30,7 +30,6 @@
 </style>
 <nav class="navbar" style="background-color: pink;">
 <nav class="navbar navbar-expand-lg ">
-  <img src="storage/den.png" alt=""width="70" height="60">
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -39,16 +38,15 @@
     <li class="nav-item">
         <a class="nav-link" href="{{url('halaman')}}">Home</a>
       </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{{url('penjualan')}}">Penjualan</a>
+      </li>
     <li class="nav-item">
         <a class="nav-link" href="{{url('tambah_pro')}}">Tambah Produk</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="{{url('pelanggan')}}">Pelanggan</a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="{{url('penjualan')}}">Penjualan</a>
-      </li>
-    
     </ul>
   </div>
 </nav>
@@ -76,14 +74,14 @@
   <tbody>
   @foreach ($produk as $produk)
     <tr>
-      <td>{{$produk->ProdukID}}</td>
-      <td>{{$produk->NamaProduk}}</td>
-      <td>{{$produk->Harga}}</td>
-      <td>{{$produk->Stok}}</td>
+      <td>{{$produk->produkID}}</td>
+      <td>{{$produk->nama_produk}}</td>
+      <td>{{$produk->harga}}</td>
+      <td>{{$produk->stok}}</td>
 
       
-      <td><a href="update_produk/{{$produk->ProdukID}}"><button type="button" class="btn btn-success"><img src="storage/edit.png" alt=""width="40" height="30"></button></a>
-      <a href="hapus_produk/{{$produk->ProdukID}}"><button type="button" class="btn btn-danger"><img src="storage/sampah.png" alt=""width="40" height="30"></button></a></td>
+      <td><a href="update_produk/{{$produk->produkID}}"><button type="button" class="btn btn-success"><img src="storage/edit.png" alt=""width="40" height="30"></button></a>
+      <a href="hapus_produk/{{$produk->produkID}}"><button type="button" class="btn btn-danger"><img src="storage/sampah.png" alt=""width="40" height="30"></button></a></td>
     </tr>
     @endforeach
   </tbody>

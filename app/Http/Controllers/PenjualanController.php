@@ -14,12 +14,16 @@ class PenjualanController extends Controller
     $penjualan = DB::table("penjualan")->latest()->first();
 
     $idPenjualan = "";
+    if(!$penjualan){
+      $idPenjualan = "1";
+    }
+    else{
     if($penjualan->status=="selesai")
       {$idPenjualan = $penjualan->PenjualanID + 1;
-   }
-   else{
+   }else{
       $idPenjualan = $penjualan->PenjualanID;
    }
+    }
 
    // return $idPenjualan;
    $detailpenjualan = DB::table("detailpenjualan")->where("PenjualanID",$idPenjualan)
@@ -43,14 +47,14 @@ class PenjualanController extends Controller
       ]);
    }
 
-      if($produk->Stok - $request->qty < 0){
+      if($produk->stok - $request->qty < 0){
       return redirect()->back()->with("info","Stok Tidak Mencukupi");
    }else{
       $detailpenjualan = DB::table("detailpenjualan")->insert([
          'PenjualanID'=> $request->idPenjualan,
          'ProdukID'=>$request->produk,
          'JumlahProduk'=>$request->qty,
-         'Subtotal'=> $request->qty * $produk->Harga
+         'Subtotal'=> $request->qty * $produk->harga
 
       ]);
 
@@ -76,6 +80,7 @@ class PenjualanController extends Controller
 
          DB::table("produk")->where('ProdukID',$request->produk)->update(['stok'=> $produk->Stok - $request->qty]);
       }
+      
       function detail_penjualan($id){
          
          $penjualan = DB::table('penjualan')->where('PenjualanID',$id)

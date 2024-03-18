@@ -8,12 +8,12 @@
 <link rel="stylesheet" href="bs/css/bootstrap.min.css">
 <style>
   body{
-    background-color: darkred;
+    background-color: gray;
   }
     .alok{
       text-align: center;
     border: 3px solid gray;
-    background-color: pink;
+    background-color: wheat;
     width: 300px;
     position: absolute;
     transform: translate(-50%,-50%);
@@ -56,6 +56,7 @@
 <br>
 <br>
 <button type="submit" class="btn btn-outline-dark">Login</button>
+
 
 </form>
 </div>

@@ -13,40 +13,40 @@ class ProdukController extends Controller
             return view('home',['produk'=> $produk]);
         }
         
-        function hapus($ProdukID){
-            DB::table('produk')->where('ProdukID','=',$ProdukID)->delete();
+        function hapus($produkID){
+            DB::table('produk')->where('ProdukID','=',$produkID)->delete();
     
             return redirect()->back();
         }
-        function update($ProdukID){
-            $produk = DB::table('produk')->where('ProdukID','=',$ProdukID)->first();
+        function update($produkID){
+            $produk = DB::table('produk')->where('ProdukID','=',$produkID)->first();
                 
             return view('update',['produk'=> $produk]);
         }
-        function proses_update(Request $request,$ProdukID){
+        function proses_update(Request $request,$produkID){
 
-            $NamaProduk = $request->NamaProduk;
-            $Harga = $request->Harga;
-            $Stok = $request->Stok;
+            $nama_produk = $request->nama_produk ;
+            $harga = $request->harga;
+            $stok = $request->stok;
                 
-            DB::table('produk')->where('ProdukID',$ProdukID) -> update([
+            DB::table('produk')->where('produkID',$produkID) -> update([
                 
-                'NamaProduk' => $NamaProduk,
-                'Harga' => $Harga,
-                'Stok' => $Stok,
+                'nama_produk' => $nama_produk,
+                'Harga' => $harga,
+                'stok' => $stok,
             ]);
             return redirect('/home');
         }
         function proses_tambah(Request $request){
-            $NamaProduk = $request->NamaProduk;
-            $Harga = $request->Harga;
-            $Stok = $request->Stok;
+            $nama_produk = $request->nama_produk;
+            $harga = $request->harga;
+            $stok = $request->stok;
            
     
             DB::table('produk')->insert([
-                'NamaProduk' => $NamaProduk,
-                'Harga' => $Harga,
-                'Stok' => $Stok,
+                'nama_produk' => $nama_produk,
+                'harga' => $harga,
+                'stok' => $stok,
             ]);
             return redirect('/home');
         }

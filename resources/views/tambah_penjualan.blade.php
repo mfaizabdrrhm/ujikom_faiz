@@ -18,7 +18,7 @@
         text-align: center;
         font-size: 40px;
         font-family: 'Times New Roman', Times, serif;
-        color: #ffffff;
+        color: black;
         background-color: pink;
         
         }
@@ -37,7 +37,7 @@
         margin: 10px;
         }
         body{
-          background-color: darkred;
+          background-color: darkolivegreen;
         }
         .qmi{
             color: #ffffff;
@@ -78,7 +78,7 @@
         
     </style>
    
-        <p>Orders</p>
+        <p>keranjang</p>
 
         @if(session("info"))
     <div class="succes">{{session("info")}}</div>
@@ -107,7 +107,7 @@
     
 
     @foreach($produk as $produk)
-  <option value="{{$produk->ProdukID}}" required >{{$produk->NamaProduk}}</option>
+  <option value="{{$produk->produkID}}" required >{{$produk->nama_produk}}</option>
   @endforeach
 </select><br><br>
 <input type="number" name="qty" min="1" max="100" placeholder="Jumlah"/>
@@ -149,8 +149,8 @@
       <?php $total_harga = 0?>
       @foreach ($detailpenjualan as $detailpenjualan)
     <tr>
-      <td>{{$detailpenjualan->NamaProduk}}</td>
-      <td>{{$detailpenjualan->Harga}}</td>
+      <td>{{$detailpenjualan->nama_produk}}</td>
+      <td>{{$detailpenjualan->harga}}</td>
       <td>{{$detailpenjualan->JumlahProduk}}</td>
       <td>{{$detailpenjualan->Subtotal}}</td>
         <?php $total_harga = $total_harga + $detailpenjualan->Subtotal ?>
@@ -177,4 +177,4 @@
  
   <a href="{{url('penjualan')}}"><button type="button" class="btn btn-secondary">Kembali</button</a>
 </body>
-</html>
+</html> 

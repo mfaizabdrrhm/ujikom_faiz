@@ -17,7 +17,7 @@
         background-color: pink;
         }
         body{
-          background-color: darkred;
+          background-color: darkcyan;
         }
     </style>
     <p>Update Pelanggan</p>

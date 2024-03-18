@@ -13,8 +13,7 @@ class RegisterController extends Controller
             'nama' => $request->nama,
             'username' => $request->username,
             'password' => hash::make($request->password),
-            'telp' => $request->telp,
-            'status'=> $request->status,
+            'level'=> $request->status,
             
         ]);
         return redirect('/login ');
