@@ -44,6 +44,7 @@
     <br>
     <input name="stok" type="number"id="stok">
     <br><br>
+    
 </div>
 <div class="container">
 <a href="{{url('home')}}"><button type="button" class="btn btn-info">Kembali</button</a>
